@@ -1,0 +1,22 @@
+# Copyright (c) 2013 The Chromium OS Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+U_BOOT_CONFIG_USE="coreboot"
+U_BOOT_FDT_USE="falco"
+
+# Initial value just for style purposes.
+LINUX_FIRMWARE=""
+USE=""
+
+USE="${USE} cros_ec falco intel_hdcp watchdog wireless34"
+
+# Allow consumer kiosk.
+# NOTE: Deprecating feature. New board should NOT have it.
+USE="${USE} allow_consumer_kiosk"
+
+# Declare TPM model.
+USE="${USE} tpm_slb9655"
+
+# Commented out on 2021-08-21 for test Akos
+# AFDO_PROFILE_SOURCE='broadwell' 
